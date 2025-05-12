@@ -1,0 +1,105 @@
+CODE_1
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int even_sum = 0;
+        int odd_sum = 0;
+
+        int n = sc.nextInt();
+        
+        int arr[] = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();  
+
+            if (arr[i] % 2 == 0) {
+                even_sum += arr[i];
+            } else {
+                odd_sum += arr[i];
+            }
+        }
+
+        // Output the results
+        System.out.println("Sum of even numbers: " + even_sum);
+        System.out.println("Sum of odd numbers: " + odd_sum);
+    }
+}
+CODE_2
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt(); 
+        int arr[] = new int[n];  
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();  
+        }
+
+        int min = arr[0];  
+
+        for (int i = 1; i < n; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+
+        System.out.println("Minimum number is: " + min);
+    }
+}
+CODE_3
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt(); 
+        int arr[] = new int[n];  
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();  
+        }
+
+        int max = arr[0];  
+
+        for (int i = 1; i < n; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+
+        System.out.println("Maximum number is: " + max);
+    }
+code_4
+  import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] nums1 = {1, 2, 3, 0, 0, 0};
+        int m = 3;
+        int[] nums2 = {2, 5, 6};
+        int n = 3;
+
+        merge(nums1, m, nums2, n);
+
+        // Print merged array
+        for (int num : nums1) {
+            System.out.print(num + " ");
+        }
+    }
+
+    public static void merge(int[] nums1, int m, int[] nums2, int n) {
+        // Copy nums2 into nums1 starting at index m
+        for (int i = 0; i < n; i++) {
+            nums1[m + i] = nums2[i];
+        }
+
+        // Sort the merged array
+        Arrays.sort(nums1);
+    }
+}
