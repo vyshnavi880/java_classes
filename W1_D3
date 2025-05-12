@@ -1,0 +1,87 @@
+code_1
+ import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+       
+        int number = sc.nextInt();
+        
+        
+        if (number >= 10 && number <= 99) {
+            int firstDigit = number / 10;  
+            int lastDigit = number % 10;  
+            int sum = firstDigit + lastDigit;   
+            int product = firstDigit * lastDigit;  
+            int totalSum = sum + product;  
+            
+            
+            if (number == totalSum) {
+                System.out.println(number + " is a special number.");
+            } else {
+                System.out.println(number + " is not a special number.");
+            }
+        } else {
+            System.out.println("Please enter a valid two-digit number.");
+        }
+        
+        sc.close();
+    }
+}
+
+code_2
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);  
+        System.out.println("Enter a number: ");
+        int n = sc.nextInt();
+        int even_sum = 0;
+        int odd_sum = 0;
+        int count = 0;
+
+        while (n != 0) {
+            int r = n % 10;
+
+            if (r % 2 == 0) {
+                even_sum += r;
+            } else {
+                odd_sum += r;
+            }
+
+            n = n / 10;
+            count++;
+        }
+
+        System.out.println("Even Sum: " + even_sum);
+        System.out.println("Odd Sum: " + odd_sum);
+        System.out.println("Number of digits: " + count);
+    }
+}
+
+code_3
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        while (num >= 10) {
+            int sum = 0;
+            while (num > 0) {
+                sum += num % 10;  
+                num = num / 10;   
+            }
+            num = sum;  
+        }
+
+        System.out.println("Single digit: " + num);
+        sc.close();
+    }
+}
