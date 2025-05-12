@@ -1,0 +1,245 @@
+code_1
+    import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt(), 
+        temp = num;
+        rev = 0;
+
+        while (temp > 0) {
+            rev = rev * 10 + temp % 10;
+            temp /= 10;
+        }
+
+        while (rev > 0) {
+            System.out.println(rev % 10);
+            rev /= 10;
+        }
+
+        sc.close();
+    }
+}
+
+code_2
+       import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+        int originalNum = num;
+        int result = 0;
+        int n = 0;
+        int temp = num;
+        while (temp != 0) {
+            temp /= 10;
+            n++;
+        }
+        temp = num; 
+
+        while (temp > 0) {
+            int digit = temp % 10;
+            result += Math.pow(digit, n);
+            temp /= 10;
+        }
+
+        if (result == originalNum) {
+            System.out.println(originalNum + " is an Armstrong number.");
+        } else {
+            System.out.println(originalNum + " is NOT an Armstrong number.");
+        }
+
+        scanner.close();
+    }
+}
+
+code_3
+   import java.util.Scanner;
+
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        
+
+        System.out.print("Enter a number: ");
+
+        int num = scanner.nextInt();
+
+
+
+        int square = num * num;
+
+        
+
+        int right = square % 100;
+
+        
+
+        int left = square / 100;
+
+
+
+        if (left + right == num) {
+
+            System.out.println(num + " is a Kaprekar number.");
+
+        } else {
+
+            System.out.println(num + " is NOT a Kaprekar number.");
+
+        }
+
+
+
+        scanner.close();
+
+    }
+
+}
+
+code_4
+      import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int num = scanner.nextInt();  // original input
+        int temp = num;               // keep a copy
+        int count = 0;
+
+        // Count digits in num (not modifying num)
+        while (temp != 0) {
+            temp /= 10;
+            count++;
+        }
+
+        int square = num * num;
+        int power = (int) Math.pow(10, count);
+        int right = square % power;
+        int left = square / power;
+
+        if (left + right == num) {
+            System.out.println(num + " is a Kaprekar number.");
+        } else {
+            System.out.println(num + " is not a Kaprekar number.");
+        }
+
+        scanner.close();
+    }
+}
+
+code_5
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int num = scanner.nextInt();  // original input
+        int temp = num;               // keep a copy
+        int count = 0;
+
+        // Count digits in num (not modifying num)
+        while (temp != 0) {
+            temp /= 10;
+            count++;
+        }
+
+        int square = num * num;
+        int power = (int) Math.pow(10, count);
+        int right = square % power;
+        int left = square / power;
+
+        if (left + right == num) {
+            System.out.println(num + " is a Kaprekar number.");
+        } else {
+            System.out.println(num + " is not a Kaprekar number.");
+        }
+
+        scanner.close();
+    }
+}
+
+code_6
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int num = scanner.nextInt();
+        int count = 0;
+        int temp = num;
+        int square = num * num;
+        
+        while (num!=0)
+        {
+            num/=10;
+            count++;
+        }
+        int power = (int) Math.pow(10,count);
+        int right = square % power;
+        int left = square / power;
+        
+
+        if (left + right == temp) {
+            System.out.println(num + " is a kaprekar num.");
+        } else {
+            System.out.println(num + "is not a kaprekar num .");
+        }
+
+       scanner.close(); 
+    }
+}
+
+code_7
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int n = sc.nextInt();  
+        
+        for (int i = 1; i <= n; i++) {  
+            for (int j = 1; j <= i; j++) {  
+                System.out.print("*");
+            }
+            System.out.println();  
+        }
+
+        sc.close();
+    }
+}
+
+code_7
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter a number: ");
+        int n = sc.nextInt();  
+
+        for (int i = n; i >= 1; i--) {  
+            for (int j = 1; j <= i; j++) {  
+                System.out.print("*");
+            }
+            System.out.println(); 
+        }
+
+        sc.close();
+    }
+}
