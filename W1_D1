@@ -1,0 +1,8 @@
+row = int(input("Enter row: "))
+col = int(input("Enter col: "))
+seat = int(input("Enter seat no: "))
+
+if seat <= col or seat % col == 0 or seat % col == 1:
+    print("CSE")
+else:
+    print("ECE")
