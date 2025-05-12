@@ -1,0 +1,144 @@
+CODE 2
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a 3-digit number: ");
+        int num = sc.nextInt();
+
+        
+        if (num < 100 || num > 999) {
+            System.out.println("Please enter a valid 3-digit number.");
+            return;
+        }
+
+        int reversed = 0;
+
+        while (num != 0) {
+            int digit = num % 10;      
+            reversed = reversed * 10 + digit;
+            num = num / 10;            
+        }
+
+        System.out.println("Reversed number: " + reversed);
+    }
+}
+
+
+
+CODE -3
+
+   import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); // To take input from the user
+
+        System.out.print("Enter a number: ");
+        int n = scanner.nextInt(); // Read integer input
+
+        if (n < 20) {
+            System.out.println("Less than 20");
+        }
+
+        if (n > 20) {
+            if (n % 2 == 0) {
+                System.out.println("It is an even number");
+            } else {
+                System.out.println("Number is odd");
+            }
+        }
+
+        scanner.close(); // Good practice to close Scanner
+    }
+}
+
+CODE_4
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); 
+
+        System.out.print("Enter a number: ");
+        int n = scanner.nextInt(); 
+
+        if (n >= 100 && n <= 999) {
+            int mid = (n / 10) % 10; 
+            if (mid % 3 == 0)
+                System.out.println("It is a trendy num");
+            else
+                System.out.println("Not a trendy num"); 
+        } else {
+            System.out.println("Not a 3 digit num"); 
+        }
+
+        scanner.close(); 
+    }
+}
+
+code_5
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = scanner.nextInt();
+
+        if (n % 2 == 1) { 
+            System.out.println("Weird");
+        } else { 
+            if (n >= 2 && n <= 5) {
+                System.out.println("Not Weird");
+            } else if (n >= 6 && n <= 20) {
+                System.out.println("Weird");
+            } else if (n > 20) {
+                System.out.println("Not Weird");
+            }
+        }
+
+        scanner.close();
+    }
+}
+
+code_6
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        //System.out.print("Enter a number: ");
+        //int n = scanner.nextInt();
+
+        //for (int i =1 ; i<=10;i++){
+        //System.out.println(i);}
+        
+        ///int i = 0;
+        //do{
+            //System.out.println(i);
+           /// i++;}
+        ///while (i<=9);
+        
+         while (n != 1) {
+            if (n % 2 == 0) {
+                n = n / 2;
+            } else {
+                n = 3 * n + 1;
+            }
+            System.out.println("Num: " + n);
+            count++;
+        }
+
+        System.out.println("Total steps: " + count);
+
+        scanner.close();
+    }
+}
