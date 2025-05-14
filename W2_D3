@@ -1,0 +1,75 @@
+CODE_1
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in); 
+
+        System.out.print("Enter number of inputs: ");
+        int n = sc.nextInt(); 
+        
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter number: ");
+            int m = sc.nextInt(); 
+            StringBuilder reverse = new StringBuilder();
+
+            while (m != 0) {
+                int remainder = m % 10;
+                reverse.append(remainder); 
+                m = m / 10;
+            }
+
+            System.out.println("Reversed number: " + reverse.toString());
+        }
+
+        sc.close();
+    }
+}
+
+CODE_2
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter size of array: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        System.out.println("Enter " + n + " elements:");
+        for(int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int left = 0, right = n - 1;
+        
+        while (left < right) {
+            while (left < right && arr[left] % 2 == 0) {
+                left++;
+            }
+            
+            while (left < right && arr[right] % 2 != 0) {
+                right--;
+            }
+
+            if (left < right) {
+                int temp = arr[left];
+                arr[left] = arr[right];
+                arr[right] = temp;
+            }
+        }
+
+        System.out.println("Array with evens on left and odds on right:");
+        for(int num : arr) {
+            System.out.print(num + " ");
+        }
+
+        sc.close();
+    }
+}
+
+CODE_3
+
